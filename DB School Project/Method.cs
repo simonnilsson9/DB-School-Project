@@ -62,7 +62,8 @@ namespace DB_School_Project
 
             var departmentNames = context.Departments.ToDictionary(d => d.DepartmentID, d => d.Name);
             
-            Console.WriteLine("Antal lärare per avdelning:");
+            Console.WriteLine("Antal lärare per avdelning:\n");
+
             foreach (var e in teacherCount)
             {
                 var departmentName = departmentNames.ContainsKey(e.DepartmentID) ? departmentNames[e.DepartmentID] : "Okänd avdelning";
